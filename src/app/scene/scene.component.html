@@ -1,0 +1,13 @@
+<div id="story" *ngIf="enterScene" [ngStyle]="{'background-image': 'url(' + currentImage + ')'}">
+  <div id="button-container">
+    <button type="button" id="prev" (click)="prev()">Anterior</button>
+    <button type="button" id="next" (click)="next()">Siguiente</button>
+  </div>
+  <p *ngFor="let sentence of story; let i=index" [ngClass]="{'selected': i==currentSentence}">{{sentence.text}}</p>
+</div>
+
+<div *ngIf="!enterScene">
+  <h1>Bienvenido a esta Historia!</h1>
+  <button type="button" class="color-button" (click)="showStory()">Comenzar</button>
+</div>
+
