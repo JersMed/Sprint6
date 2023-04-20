@@ -48,7 +48,7 @@ button {
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background-color: #3498db; /* color azul */
+  background-color: #3498db;
   color: white;
   border-radius: 5px;
   position: relative;
@@ -62,18 +62,18 @@ button:hover::before {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  box-shadow: 0 0 10px 2px #2980b9; /* color azul oscuro */
+  box-shadow: 0 0 10px 2px #2980b9;
   animation: pulse-border 1s ease-in-out infinite;
 }
 
 @keyframes pulse-border {
   0% {
-    box-shadow: 0 0 10px 2px #2980b9; /* color azul oscuro */
+    box-shadow: 0 0 10px 2px #2980b9;
   }
   50% {
-    box-shadow: 0 0 20px 5px #2980b9; /* color azul oscuro */
+    box-shadow: 0 0 20px 5px #2980b9;
   }
   100% {
-    box-shadow: 0 0 10px 2px #2980b9; /* color azul oscuro */
+    box-shadow: 0 0 10px 2px #2980b9;
   }
 }
