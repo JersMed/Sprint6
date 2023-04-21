@@ -48,9 +48,9 @@ button {
   border: none;
   padding: 10px 20px;
   font-size: 20px;
-  background-color: #3498db;
-  color: white;
-  border-radius: 5px;
+  background-color: #D8D8D8;
+  color: #000;
+  border-radius: 50px;
   position: relative;
 }
 
@@ -61,19 +61,53 @@ button:hover::before {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 5px;
-  box-shadow: 0 0 10px 2px #2980b9;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 2px #EFF5F5;
   animation: pulse-border 1s ease-in-out infinite;
 }
 
 @keyframes pulse-border {
   0% {
-    box-shadow: 0 0 10px 2px #2980b9;
+    box-shadow: 0 0 10px 2px #EFF5F5;
   }
   50% {
-    box-shadow: 0 0 20px 5px #2980b9;
+    box-shadow: 0 0 20px 5px #EFF5F5;
   }
   100% {
-    box-shadow: 0 0 10px 2px #2980b9;
+    box-shadow: 0 0 10px 2px #EFF5F5;
+  }
+}
+
+.home-btn {
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #D8D8D8;
+  color: black;
+  border-radius: 50px;
+  position: relative;
+}
+
+.home-btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  box-shadow: 0 0 10px 2px #000;
+  animation: pulse-border-home 1s ease-in-out infinite;
+}
+
+@keyframes pulse-border-home {
+  0% {
+    box-shadow: 0 0 10px 2px #000;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #000;
+  }
+  100% {
+    box-shadow: 0 0 10px 2px #000;
   }
 }
