@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import storyJson from './_files/story.json';
-import {Sentence} from './sentence.model';
+import {Sentence} from './interfaces/sentence.interface';
 
 @Component({
   selector: 'app-home',

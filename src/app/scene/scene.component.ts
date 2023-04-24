@@ -1,4 +1,4 @@
-import { Sentence } from './../home/sentence.model';
+import { Sentence } from '../home/interfaces/sentence.interface';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -13,8 +13,6 @@ export class SceneComponent implements OnInit {
   public currentSentence:number = 0;
   public currentImage:String = "";
   public enterScene:boolean = false;
-  public bodyHtml = document.getElementsByTagName('body')[0];
-
 
   constructor() {
   }
@@ -22,20 +20,23 @@ export class SceneComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next(){
-    if(this.currentSentence < (this.story.length - 1)){
+  next() {
+    if (this.currentSentence < (this.story.length - 1)) {
       this.currentSentence++;
-      this.bodyHtml.style.backgroundImage = `url('${this.story[this.currentSentence].backgroundImg}')`;
+      this.currentImage = this.story[this.currentSentence].backgroundImg;
     }
   }
-  prev(){
-    if(this.currentSentence > 0){
+  
+  prev() {
+    if (this.currentSentence > 0) {
       this.currentSentence--;
-      this.bodyHtml.style.backgroundImage = `url('${this.story[this.currentSentence].backgroundImg}')`;
+      this.currentImage = this.story[this.currentSentence].backgroundImg;
     }
   }
-  showStory(){
-    this.bodyHtml.style.backgroundImage = `url('${this.story[this.currentSentence].backgroundImg}')`;
-    this.enterScene=true;
+  
+  showStory() {
+    this.currentImage = this.story[this.currentSentence].backgroundImg;
+    this.enterScene = true;
   }
+  
 }
